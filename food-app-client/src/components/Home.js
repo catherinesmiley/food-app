@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Ingredients from './Ingredients'
+import IngredientsContainer from './IngredientsContainer'
 
 const Home = () => {
     return (
         <div>
             <h1>Food App</h1>
-            <Ingredients />
+            <IngredientsContainer />
         </div>
     );
 };
