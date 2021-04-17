@@ -2,18 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { fetchIngredients } from '../actions/ingredients'
+import Ingredients from './Ingredients'
 
-class Ingredients extends Component {
+class IngredientsContainer extends Component {
 
     componentDidMount() {
         this.props.fetchIngredients()
     }
 
     render() {
-        console.log("ingredients in ingredients container", this.props.ingredients)
+
         return (
             <div>
-                All Ingredients
+                <Ingredients ingredients={this.props.ingredients} />
             </div>
         );
     }
@@ -21,4 +22,4 @@ class Ingredients extends Component {
 
 const mapStateToProps = ({ ingredients }) => ({ ingredients })
 
-export default connect(mapStateToProps, { fetchIngredients })(Ingredients);
+export default connect(mapStateToProps, { fetchIngredients })(IngredientsContainer);
