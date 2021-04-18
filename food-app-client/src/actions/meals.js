@@ -4,6 +4,6 @@ export const fetchMeals = () => {
     return dispatch => {
         fetch(`${BASE_URL}`)
         .then(resp => resp.json())
-        .then(meals => console.log("meals in fetch meals", meals))
+        .then(meals => dispatch({ type: 'FETCH_MEALS', meals }))
     }
 }
