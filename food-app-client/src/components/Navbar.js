@@ -10,9 +10,9 @@ const Navbar = () => {
             >Home</NavLink>
             <br />
             <NavLink
-                to="/ingredients"
+                to="/pantryitems"
                 exact
-            >Ingredients</NavLink>
+            >Pantry Items</NavLink>
         </div>
     );
 };

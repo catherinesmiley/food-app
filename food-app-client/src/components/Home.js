@@ -1,7 +1,5 @@
 import React from 'react';
 
-import IngredientsContainer from './IngredientsContainer'
-
 const Home = () => {
     return (
         <div>
