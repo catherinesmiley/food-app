@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
 
 import { fetchMeals } from '../actions/meals'
+import Meals from './Meals'
 
 class MealsContainer extends Component {
 
@@ -13,7 +15,9 @@ class MealsContainer extends Component {
         console.log("meals in meals container", this.props.meals)
         return (
             <div>
-                hiiiiiiiiiiiii
+                <Switch>
+                    <Route exact path="/meals" render={() => <Meals meals={this.props.meals} />} />
+                </Switch>
             </div>
         );
     }
