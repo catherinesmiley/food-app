@@ -12,7 +12,7 @@ class MealsContainer extends Component {
     }
 
     render() {
-        console.log("meals in meals container", this.props.meals)
+
         return (
             <div>
                 <Switch>
