@@ -13,6 +13,11 @@ const Navbar = () => {
                 to="/pantryitems"
                 exact
             >Pantry Items</NavLink>
+            <br />
+            <NavLink
+                to="/meals"
+                exact
+            >Meals</NavLink>
         </div>
     );
 };
