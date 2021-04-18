@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
 
 import { fetchIngredients } from '../actions/ingredients'
 import Ingredients from './Ingredients'
@@ -14,7 +15,9 @@ class IngredientsContainer extends Component {
 
         return (
             <div>
-                <Ingredients ingredients={this.props.ingredients} />
+                <Switch>
+                    <Route exact path="/ingredients" render={() => <Ingredients ingredients={this.props.ingredients} />} />
+                </Switch>
             </div>
         );
     }

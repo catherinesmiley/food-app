@@ -8,6 +8,11 @@ const Navbar = () => {
                 to="/"
                 exact
             >Home</NavLink>
+            <br />
+            <NavLink
+                to="/ingredients"
+                exact
+            >Ingredients</NavLink>
         </div>
     );
 };
