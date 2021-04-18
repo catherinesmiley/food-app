@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { fetchIngredients } from '../actions/ingredients'
+import Ingredients from './Ingredients'
 
 class IngredientsContainer extends Component {
 
@@ -13,7 +14,7 @@ class IngredientsContainer extends Component {
         console.log("ingredients in ingredients container", this.props.ingredients)
         return (
             <div>
-                hiiiiiiiii
+                <Ingredients ingredients={this.props.ingredients} />
             </div>
         );
     }

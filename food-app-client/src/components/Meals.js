@@ -1,5 +1,7 @@
 import React from 'react';
 
+import IngredientsContainer from './IngredientsContainer'
+
 const Meals = ({ meals }) => {
 
     const mealsList = meals.map((meal, index) => {
@@ -11,7 +13,10 @@ const Meals = ({ meals }) => {
     })
 
     return (
-        <div>{mealsList}</div>
+        <>
+            {mealsList}
+            <IngredientsContainer />
+        </>
     );
 };
 

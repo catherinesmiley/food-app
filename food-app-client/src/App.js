@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import PantryItemsContainer from './components/PantryItemsContainer'
 import MealsContainer from './components/MealsContainer'
-import IngredientsContainer from './components/IngredientsContainer'
 
 class App extends Component {
     render() {
@@ -18,7 +17,6 @@ class App extends Component {
                     </Switch>
                     <PantryItemsContainer />
                     <MealsContainer />
-                    <IngredientsContainer />
                 </div>
             </Router>
         )
