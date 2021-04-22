@@ -12,7 +12,12 @@ const Navbar = () => {
             <NavLink
                 to="/pantryitems"
                 exact
-            >Pantry Items</NavLink>
+            >My Pantry Items</NavLink>
+            <br />
+            <NavLink
+                to="/pantryitems/new"
+                exact
+            >Add Pantry Item</NavLink>
             <br />
             <NavLink
                 to="/meals"

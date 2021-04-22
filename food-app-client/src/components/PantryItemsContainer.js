@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import { fetchPantryItems } from '../actions/pantryitems'
 import PantryItems from './PantryItems'
+import PantryItemsForm from './PantryItemsForm'
 
 class PantryItemsContainer extends Component {
 
@@ -17,6 +18,7 @@ class PantryItemsContainer extends Component {
             <div>
                 <Switch>
                     <Route exact path="/pantryitems" render={() => <PantryItems items={this.props.items} />} />
+                    <Route exact path="/pantryitems/new" component={PantryItemsForm} />
                 </Switch>
             </div>
         );

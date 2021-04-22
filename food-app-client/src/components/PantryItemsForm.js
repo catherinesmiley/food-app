@@ -4,7 +4,7 @@ class PantryItemsForm extends Component {
     render() {
         return (
             <div>
-                
+                Pantry Items Form
             </div>
         );
     }
