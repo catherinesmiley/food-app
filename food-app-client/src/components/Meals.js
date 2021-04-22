@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import IngredientsContainer from './IngredientsContainer'
-
 const Meals = ({ meals }) => {
 
     const mealsList = meals.map((meal, index) => {
@@ -18,7 +16,6 @@ const Meals = ({ meals }) => {
     return (
         <>
             {mealsList}
-            <IngredientsContainer />
         </>
     );
 };
