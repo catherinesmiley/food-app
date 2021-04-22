@@ -11,29 +11,47 @@ class PantryItemsForm extends Component {
         amount: ''
     }
 
+    handleOnChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     render() {
-        console.log("state in pantry items form", this.state)
+
         return (
             <div>
                 <form>
                     <input 
                         type="text"
                         placeholder="Pantry item"
+                        name="name"
+                        onChange={this.handleOnChange}
+                        value={this.state.name}
                     />
                     <br />
                     <input 
                         type="text"
                         placeholder="Purchase date"
+                        name="purchase_date"
+                        onChange={this.handleOnChange}
+                        value={this.state.purchase_date}
                     />
                     <br />
                     <input 
                         type="text"
                         placeholder="Expiration date"
+                        name="expiration_date"
+                        onChange={this.handleOnChange}
+                        value={this.state.expiration_date}
                     />
                     <br />
                     <input 
                         type="text"
                         placeholder="Amount"
+                        name="amount"
+                        onChange={this.handleOnChange}
+                        value={this.state.amount}
                     />
                     <br />
                     <br />
