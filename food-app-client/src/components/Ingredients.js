@@ -6,6 +6,7 @@ const Ingredients = ({ ingredients, mealID }) => {
 
     return (
         <div>
+            <h3>Ingredients:</h3> 
             {ingredientsList.map(ingredient => {
                 return (<p key={ingredient.id}>{ingredient.amount} {ingredient.name}</p>)
             })}

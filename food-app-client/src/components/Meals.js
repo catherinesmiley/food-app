@@ -9,7 +9,6 @@ const Meals = ({ meals }) => {
                 to={`/meals/${meal.id}`}
             ><h2>{meal.title}</h2></Link>
             <h3>{meal.description}</h3>
-            <p>{meal.instructions}</p>
         </div>
     })
 

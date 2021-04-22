@@ -12,6 +12,8 @@ const Meal = ({ meals }) => {
     return (
         <>
             <h2>{meal.title}</h2>
+            <h3>Instructions:</h3>
+            <p>{meal.instructions}</p>
             <IngredientsContainer mealID={meal.id}/>
         </>
     );
