@@ -4,7 +4,9 @@ export const pantryItemsReducer = (state = [], action) => {
             return action.items
         case 'ADD_PANTRY_ITEM':
             return [...state, action.item]
+        case 'DELETE_PANTRY_ITEM':
+            return 
         default: 
-            return state 
+            return state.filter(i => i.id !== action.item.id)
         }
     }

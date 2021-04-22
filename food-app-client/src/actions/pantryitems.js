@@ -22,3 +22,12 @@ export const addPantryItem = item => {
         .then(item => dispatch({ type: 'ADD_PANTRY_ITEM', item }))
     }
 }
+
+export const deletePantryItem = item => {
+    return dispatch => {
+        dispatch({ type: 'DELETE_PANTRY_ITEM', item })
+        fetch(`${BASE_URL}${item.id}`, {
+            method: "DELETE"
+        })
+    }
+}
