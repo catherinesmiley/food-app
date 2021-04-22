@@ -7,3 +7,18 @@ export const fetchPantryItems = () => {
         .then(items => dispatch({ type: 'FETCH_PANTRY_ITEMS', items  }))
     }
 }
+
+export const addPantryItem = item => {
+    return dispatch => {
+        fetch(`${BASE_URL}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(item)
+        })
+        .then(resp => resp.json())
+        .then(item => dispatch({ type: 'ADD_PANTRY_ITEM', item }))
+    }
+}
