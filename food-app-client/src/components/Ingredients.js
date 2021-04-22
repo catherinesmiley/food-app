@@ -2,17 +2,15 @@ import React from 'react';
 
 const Ingredients = ({ ingredients, mealID }) => {
 
-    const ingredientsList = ingredients.map((ingredient, index) => {
-        return <div key={ingredient.id} className="ingredientsList">
-            <p>{ingredient.amount} {ingredient.name}</p>
-        </div>
-    })
-
-    console.log("mealID in ingredients", mealID)
+    let ingredientsList = ingredients.filter(i => i.meal_id === mealID)
 
     return (
-        <div>{ingredientsList}</div>
-    );
-};
+        <div>
+            {ingredientsList.map(ingredient => {
+                return (<p key={ingredient.id}>{ingredient.amount} {ingredient.name}</p>)
+            })}
+        </div>
+    )
+}
 
 export default Ingredients;

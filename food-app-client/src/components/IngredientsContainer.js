@@ -11,7 +11,7 @@ class IngredientsContainer extends Component {
     }
 
     render() {
-        console.log("props in ingredients container", this.props)
+
         return (
             <div>
                 <Ingredients ingredients={this.props.ingredients} mealID={this.props.mealID} />
