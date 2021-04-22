@@ -27,7 +27,17 @@ class PantryItemsForm extends Component {
         }
 
         this.props.addPantryItem(item)
+        this.resetForm()
 
+    }
+
+    resetForm = () => {
+        this.setState({
+            name: '',
+            purchase_date: '',
+            expiration_date: '',
+            amount: ''
+        })
     }
 
     render() {
