@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import { fetchMeals } from '../actions/meals'
 import Meals from './Meals'
+import Meal from './Meal'
 
 class MealsContainer extends Component {
 
@@ -17,6 +18,7 @@ class MealsContainer extends Component {
             <div>
                 <Switch>
                     <Route exact path="/meals" render={() => <Meals meals={this.props.meals} />} />
+                    <Route exact path="/meals/:id" render={() => <Meal meals={this.props.meals} />} />
                 </Switch>
             </div>
         );
