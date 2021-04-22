@@ -26,7 +26,7 @@ export const addPantryItem = item => {
 export const deletePantryItem = item => {
     return dispatch => {
         dispatch({ type: 'DELETE_PANTRY_ITEM', item })
-        fetch(`${BASE_URL}${item.id}`, {
+        fetch(`${BASE_URL}/${item.id}`, {
             method: "DELETE"
         })
     }
