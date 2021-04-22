@@ -17,11 +17,24 @@ class PantryItemsForm extends Component {
         })
     }
 
+    handleOnSubmit = event => {
+        event.preventDefault()
+        const item = {
+            name: this.state.name,
+            purchase_date: this.state.purchase_date,
+            expiration_date: this.state.expiration_date,
+            amount: this.state.amount
+        }
+
+        this.props.addPantryItem(item)
+
+    }
+
     render() {
 
         return (
             <div>
-                <form>
+                <form onSubmit={event => this.handleOnSubmit(event)}>
                     <input 
                         type="text"
                         placeholder="Pantry item"
