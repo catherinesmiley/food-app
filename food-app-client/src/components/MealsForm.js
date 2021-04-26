@@ -19,7 +19,13 @@ class MealsForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        console.log("event submitted!")
+        const meal = {
+            title: this.state.title,
+            description: this.state.description,
+            instructions: this.state.instructions
+        }
+        
+        this.props.addMeal(meal)
     }
 
     render() {
