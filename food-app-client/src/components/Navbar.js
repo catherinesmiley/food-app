@@ -23,6 +23,12 @@ const Navbar = () => {
                 to="/meals"
                 exact
             >Meals</NavLink>
+            <br />
+            <NavLink
+                to="/meals/new"
+                exact
+            >Add Meal</NavLink>
+            <br />
         </div>
     );
 };
