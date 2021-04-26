@@ -7,3 +7,18 @@ export const fetchMeals = () => {
         .then(meals => dispatch({ type: 'FETCH_MEALS', meals }))
     }
 }
+
+export const addMeal = meal => {
+    return dispatch => {
+        fetch(`${BASE_URL}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(meal)
+        })
+        .then(resp => resp.json())
+        .then(meal => dispatch({ type: 'ADD_MEAL', meal }))
+    }
+}

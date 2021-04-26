@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
+import { addMeal } from '../actions/meals'
 
 class MealsForm extends Component {
     render() {
@@ -10,4 +13,4 @@ class MealsForm extends Component {
     }
 }
 
-export default MealsForm;
+export default connect(null, { addMeal })(MealsForm);
