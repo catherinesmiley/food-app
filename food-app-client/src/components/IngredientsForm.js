@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'
+
+import { addIngredient } from '../actions/ingredients'
 
 const IngredientsForm = () => {
     return (
@@ -8,4 +11,4 @@ const IngredientsForm = () => {
     );
 };
 
-export default IngredientsForm;
+export default connect(null, { addIngredient })(IngredientsForm);
