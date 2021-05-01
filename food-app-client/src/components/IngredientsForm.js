@@ -11,7 +11,14 @@ class IngredientsForm extends Component {
         meal_id: ''
     }
 
+    handleOnChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     render() {
+        console.log("state in ingredients form", this.state)
         return (
             <div>
                 Ingredients: 
@@ -20,12 +27,14 @@ class IngredientsForm extends Component {
                         name="text"
                         placeholder="Amount"
                         name="amount"
+                        onChange={this.handleOnChange}
                         value={this.state.amount}
                     />
                     <input
                         type="text"
                         placeholder="Ingredient"
-                        name="ingredient"
+                        name="name"
+                        onChange={this.handleOnChange}
                         value={this.state.name}
                     />
                 </form>
