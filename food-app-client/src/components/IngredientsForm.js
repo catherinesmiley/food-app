@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { addIngredient } from '../actions/ingredients'
@@ -14,7 +14,21 @@ class IngredientsForm extends Component {
     render() {
         return (
             <div>
-                Ingredients Form!
+                Ingredients: 
+                <form>
+                    <input 
+                        name="text"
+                        placeholder="Amount"
+                        name="amount"
+                        value={this.state.amount}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Ingredient"
+                        name="ingredient"
+                        value={this.state.name}
+                    />
+                </form>
             </div>
         );
     }

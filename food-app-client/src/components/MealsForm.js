@@ -50,6 +50,7 @@ class MealsForm extends Component {
                         value={this.state.description}
                     />
                     <br />
+                    <br />
                     <IngredientsForm />
                     <br />
                     <textarea
