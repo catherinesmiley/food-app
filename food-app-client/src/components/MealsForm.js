@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { addMeal } from '../actions/meals'
+import IngredientsForm from './IngredientsForm'
 
 class MealsForm extends Component {
 
@@ -48,6 +49,8 @@ class MealsForm extends Component {
                         onChange={this.handleOnChange}
                         value={this.state.description}
                     />
+                    <br />
+                    <IngredientsForm />
                     <br />
                     <textarea
                         placeholder="Instructions" 
