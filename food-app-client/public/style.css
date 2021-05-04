@@ -37,3 +37,30 @@ h4 {
 p {
     color: #155263
 }
+
+input[type=text] {
+    padding: 8px 8px;
+    margin: 8px 0;
+    width: 20%;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Domine', serif;
+}
+
+input[type=text]:focus {
+    border: 3px solid #f0b917;
+}
+
+textarea {
+    padding: 8px 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Domine', serif;
+    width: 60%;
+    height: 150px;
+}
+
+textarea:focus {
+    border: 3px solid #f0b917;
+}

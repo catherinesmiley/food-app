@@ -24,7 +24,7 @@ class IngredientsForm extends Component {
                 Ingredients: 
                 <form>
                     <input 
-                        name="text"
+                        type="text"
                         placeholder="Amount"
                         name="amount"
                         onChange={this.handleOnChange}
