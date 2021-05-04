@@ -18,7 +18,7 @@ class IngredientsForm extends Component {
     }
 
     render() {
-        console.log("state in ingredients form", this.state)
+
         return (
             <div>
                 Ingredients: 
