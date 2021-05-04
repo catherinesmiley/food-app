@@ -64,3 +64,17 @@ textarea {
 textarea:focus {
     border: 3px solid #f0b917;
 }
+
+input[type=submit] {
+    padding: 8px 8px;
+    font-family: 'Domine', serif;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #f0b917;
+    border: 1px solid #f0b917;
+    color: #f9f8eb;
+}
+
+input[type=submit]:active {
+    transform: scale(0.90);
+}
