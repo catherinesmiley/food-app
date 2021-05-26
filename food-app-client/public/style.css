@@ -77,8 +77,9 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #155263;
+    border: none
 }
 
 input[type=submit]:active {
-    transform: scale(0.90);
+    transform: scale(0.90)
 }
