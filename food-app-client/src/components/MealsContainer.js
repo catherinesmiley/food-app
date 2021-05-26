@@ -6,6 +6,7 @@ import { fetchMeals } from '../actions/meals'
 import Meals from './Meals'
 import Meal from './Meal'
 import MealsForm from './MealsForm'
+import GroceryList from './GroceryList'
 
 class MealsContainer extends Component {
 
@@ -21,6 +22,7 @@ class MealsContainer extends Component {
                     <Route exact path="/meals" render={() => <Meals meals={this.props.meals} />} />
                     <Route exact path="/meals/new" component={MealsForm} />
                     <Route exact path="/meals/:id" render={() => <Meal meals={this.props.meals} />} />
+                    <Route exact path="/grocerylist" component={GroceryList} />
                 </Switch>
             </div>
         );
