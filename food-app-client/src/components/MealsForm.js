@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { addMeal } from '../actions/meals'
-import IngredientsForm from './IngredientsForm'
+// import IngredientsForm from './IngredientsForm'
 
 class MealsForm extends Component {
 
     state = {
         title: '',
         description: '',
-        instructions: ''
+        // instructions: ''
     }
 
     handleOnChange = event => {
@@ -22,11 +22,16 @@ class MealsForm extends Component {
         event.preventDefault()
         const meal = {
             title: this.state.title,
-            description: this.state.description,
-            instructions: this.state.instructions
+            description: this.state.description
+            // instructions: this.state.instructions
         }
         
         this.props.addMeal(meal)
+        this.redirectToIndex()
+    }
+
+    redirectToIndex = () => {
+        window.location.href = "/meals"
     }
 
     render() {
@@ -51,15 +56,15 @@ class MealsForm extends Component {
                     />
                     <br />
                     <br />
-                    <IngredientsForm />
+                    {/* <IngredientsForm /> */}
                     <br />
-                    <textarea
+                    {/* <textarea
                         placeholder="Instructions" 
                         name="instructions"
                         onChange={this.handleOnChange}
                         value={this.state.instructions}
                     />
-                    <br />
+                    <br /> */}
                     <input type="submit" value="Add new meal"/>
                 </form>
             </div>
