@@ -22,3 +22,12 @@ export const addMeal = meal => {
         .then(meal => dispatch({ type: 'ADD_MEAL', meal }))
     }
 }
+
+export const deleteMeal = meal => {
+    return dispatch => {
+        dispatch({ type: 'DELETE_MEAL', meal })
+        fetch(`${BASE_URL}/${meal.id}`, {
+            method: "DELETE"
+        })
+    }
+}

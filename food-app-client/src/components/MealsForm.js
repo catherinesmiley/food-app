@@ -28,11 +28,16 @@ class MealsForm extends Component {
         
         this.props.addMeal(meal)
         this.redirectToIndex()
+        // this.redirectToShowPage(meal)
     }
 
     redirectToIndex = () => {
         window.location.href = "/meals"
     }
+
+    // redirectToShowPage = (meal) => {
+    //     window.location.href = "/meals/`${meal.id}`"
+    // }
 
     render() {
 
@@ -55,9 +60,9 @@ class MealsForm extends Component {
                         value={this.state.description}
                     />
                     <br />
-                    <br />
+                    {/* <br /> */}
                     {/* <IngredientsForm /> */}
-                    <br />
+                    {/* <br /> */}
                     {/* <textarea
                         placeholder="Instructions" 
                         name="instructions"
