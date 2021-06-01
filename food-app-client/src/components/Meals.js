@@ -7,7 +7,7 @@ const Meals = ({ meals, deleteMeal }) => {
         return <div key={meal.id} className="mealsList">
             <Link 
                 to={`/meals/${meal.id}`}
-            ><h2>{meal.title} <button onClick={() => deleteMeal(meal)}>X</button></h2></Link>
+            ><h2>{meal.title} </h2></Link><button onClick={() => deleteMeal(meal)}>X</button>
             <h3>{meal.description}</h3>
         </div>
     })
