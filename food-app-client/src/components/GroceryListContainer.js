@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { fetchGroceryListItems } from '../actions/grocerylistitems'
+import GroceryListItems from './GroceryListItems';
 
 class GroceryListContainer extends Component {
 
@@ -10,10 +11,10 @@ class GroceryListContainer extends Component {
     }
 
     render() {
-        
         return (
             <div>
                 Grocery List!
+                <GroceryListItems grocery_items={this.props.grocery_items} />
             </div>
         );
     }
