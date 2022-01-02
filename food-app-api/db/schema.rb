@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_213925) do
+ActiveRecord::Schema.define(version: 2022_01_02_145933) do
+
+  create_table "grocery_list_items", force: :cascade do |t|
+    t.string "name"
+    t.string "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
