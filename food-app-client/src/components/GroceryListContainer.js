@@ -13,7 +13,6 @@ class GroceryListContainer extends Component {
     render() {
         return (
             <div>
-                Grocery List!
                 <GroceryListItems grocery_items={this.props.grocery_items} />
             </div>
         );
